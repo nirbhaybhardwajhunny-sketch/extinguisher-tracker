@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Extinguisher Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    Fire Extinguisher Tracker
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Add New Extinguisher Form -->
+    <section id="add-extinguisher">
+      <h2>Add New Extinguisher</h2>
+      <form id="extinguisherForm">
+        <label for="extId">ID / Serial Number:</label>
+        <input type="text" id="extId" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="type">Type:</label>
+        <select id="type" required>
+          <option value="">Select Type</option>
+          <option value="Water">Water</option>
+          <option value="CO2">CO₂</option>
+          <option value="Foam">Foam</option>
+          <option value="Powder">Powder</option>
+          <option value="Wet Chemical">Wet Chemical</option>
+        </select>
+
+        <label for="brand">Brand / Manufacturer:</label>
+        <input type="text" id="brand">
+
+        <label for="capacity">Capacity (kg):</label>
+        <input type="number" id="capacity" min="0" step="0.1">
+
+        <label for="weight">Current Weight (kg):</label>
+        <input type="number" id="weight" min="0" step="0.1">
+
+        <label for="pressure">Pressure / Gauge Reading:</label>
+        <input type="text" id="pressure">
+
+        <label for="lastRefill">Last Refill Date:</label>
+        <input type="date" id="lastRefill" required>
+
+        <label for="lastTest">Last Hydraulic Test Date:</label>
+        <input type="date" id="lastTest" required>
+
+        <label for="condition">Condition:</label>
+        <select id="condition">
+          <option value="Good">Good</option>
+          <option value="Needs Service">Needs Service</option>
+          <option value="Expired">Expired</option>
+        </select>
+
+        <label for="responsible">Assigned Staff / Responsible Person:</label>
+        <input type="text" id="responsible">
+
+        <label for="notes">Notes / Remarks:</label>
+        <input type="text" id="notes">
+
+        <button type="submit">Add Extinguisher</button>
+      </form>
+    </section>
+
+    <!-- Extinguishers List -->
+    <section id="extinguisherList">
+      <h2>Extinguishers List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Brand</th>
+            <th>Capacity</th>
+            <th>Weight</th>
+            <th>Pressure</th>
+            <th>Last Refill</th>
+            <th>Next Refill</th>
+            <th>Last Test</th>
+            <th>Next Test</th>
+            <th>Condition</th>
+            <th>Responsible</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="listBody">
+          <!-- Data will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Fire Safety Tracker
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
